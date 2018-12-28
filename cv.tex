@@ -1,0 +1,133 @@
+\documentclass[a4paper,12pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Mary \textsc{Feofanova}
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Contacts}
+
+\begin{tabular}{rl}
+    \textsc{Phone:}     & +7-916-835-49-66\\
+    \textsc{email:}     & \href{mailto:mary.fifa3000@gmail.com}{mary.fifa3000@gmail.com}\\
+    \textsc{GitHub:}    &
+    \url{https://github.com/mary3000}
+\end{tabular}
+
+%Section: Work Experience at the top
+\section{Work Experience}
+\begin{tabular}{r|p{11cm}}
+\textsc{Summer 2018} & \textbf{JetBrains, Software Engineering Intern}\\&
+\footnotesize{
+Project: RubyMine, language: Java.\\& 
+\begin{itemize}
+    \item Developed new intentions for RubyMine IDE.
+    \item Introduced better parameter refactoring: added parameter type choosing option, improved invocation points search, made preview more illustrative.
+    \item Fixed multiple bugs in related subsystems.
+\end{itemize}}
+\end{tabular}
+
+%Section: Education
+\section{Education}
+\begin{tabular}{rl}	
+ 2016 - 2020 & \textbf{Moscow Institute of Physics and Technology}, Russia\\
+& Department of Innovation and High Technology\\
+& Bachelor of Applied Mathematics and Informatics\\
+\end{tabular}
+
+%Section: Projects
+\section{Projects}
+\begin{tabular}{rl}	
+ \href{https://github.com/AndroidTopTeam/MyChief}{MyChief} & Developed Android application with a team of 3 students: we created\\ & a tool, that helps people to find what meal they can do with products\\ & they have. I implemented structure of app, two others worked with\\ & API and design.\\
+ \href{https://github.com/mary3000/telegram-restaurant-bot}{RestaurantBot} & Created simple restaurant bot on python, in which you can look at\\ & the menu and choose meals for order, book a table, etc. I used\\ & database on sqlite for collecting and showing data for user.
+ 
+\end{tabular}
+
+%Section: Languages
+\section{Languages}
+\begin{tabular}{rl}
+ \textsc{Russian:}&Native\\
+\textsc{English:}&Intermediate\\
+\end{tabular}
+
+\section{Knowledge and Skills}
+\begin{tabular}{rl}
+ Advanced:& Java, C++\\
+Basic:& Python, Ruby, Android, SQL, HTML, CSS, Git\\
+Knowledge:& Concurrent computing, Algorithms, Data structures
+\end{tabular}
+
+%\newpage
+%\hypertarget{gmat}{\textsc{Gmat}\setmainfont{LMRoman10 Regular}\textregistered\setmainfont[SmallCapsFont=Fontin-SmallCaps]{Fontin-Regular}}
+
+%\XeTeXpdffile ''GMAT.pdf'' page 1 scaled 800
+
+\end{document}
