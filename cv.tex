@@ -6,10 +6,12 @@
 \usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
 \RequirePackage{color,graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[big]{layaureo} 				%better formatting of the A4 page
+%\usepackage[big]{layaureo} 				%better formatting of the A4 page
+\usepackage[left=2cm,right=2cm,top=1cm,bottom=1cm,bindingoffset=0cm]{geometry}
 % an alternative to Layaureo can be ** \usepackage{fullpage} **
 \usepackage{supertabular} 				%for Grades
 \usepackage{titlesec}					%custom \section
+\usepackage{makecell}
 
 %Setup hyperref package, and colours for links
 \usepackage{hyperref}
@@ -85,20 +87,21 @@ ItalicFont = Fontin-Italic.otf
 %Section: Work Experience at the top
 \section{Work Experience}
 \begin{tabular}{r|p{11cm}}
-\textsc{Summer 2018} & \textbf{JetBrains, Software Engineering Intern}\\&
+\makecell[r]{\textsc{October 2018} \\ \textsc{- Present}} & \textbf{JetBrains, Software Engineer (Java)}\\&
 \footnotesize{
-Project: RubyMine, language: Java.\\& 
-\begin{itemize}
-    \item Developed new intentions for RubyMine IDE.
-    \item Introduced better parameter refactoring: added parameter type choosing option, improved invocation points search, made preview more illustrative.
-    \item Fixed multiple bugs in related subsystems.
-\end{itemize}}
+     \makecell[l]{
+     Continued working on refactoring system in RubyMine, \\currently improving Ruby on Rails integration}}
+\\
+\makecell[r]{\textsc{July 2018}\\  \textsc{- August 2018}} & \textbf{JetBrains, Software Engineering Intern (Java)}\\&
+\footnotesize{
+\makecell[l]{Developed new intentions for RubyMine IDEm introduced better parameter \\refactoring: added parameter type choosing option, improved invocation points search,\\ made preview more illustrative.}
+}
 \end{tabular}
 
 %Section: Education
 \section{Education}
 \begin{tabular}{rl}	
- 2016 - 2020 & \textbf{Moscow Institute of Physics and Technology}, Russia\\
+ 2016 - 2020 (Present) & \textbf{Moscow Institute of Physics and Technology}, Russia\\
 & Department of Innovation and High Technology\\
 & Bachelor of Applied Mathematics and Informatics\\
 \end{tabular}
@@ -111,18 +114,20 @@ Project: RubyMine, language: Java.\\&
  
 \end{tabular}
 
-%Section: Languages
-\section{Languages}
-\begin{tabular}{rl}
- \textsc{Russian:}&Native\\
-\textsc{English:}&Intermediate\\
+\section{Hackathons}
+\begin{tabular}{r|p{11cm}}
+\textsc{November 2018} & \textbf{Photo Lab Live Challenge: Go Viral or Go Home (1st place)}\\&
+\footnotesize{
+\makecell[l]{Task was to suggest and develop new image filter using company API.\\ We developed tool for clothes segmentation.}
+}
 \end{tabular}
 
 \section{Knowledge and Skills}
 \begin{tabular}{rl}
- Advanced:& Java, C++\\
+Advanced:& Java, C++\\
 Basic:& Python, Ruby, Android, SQL, HTML, CSS, Git\\
-Knowledge:& Concurrent computing, Algorithms, Data structures
+Knowledge:& Algorithms, Data structures, Concurrent computing\\
+Languages:& Russian (native), English (intermidiate)
 \end{tabular}
 
 %\newpage
