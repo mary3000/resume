@@ -7,7 +7,7 @@
 \RequirePackage{color,graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
 %\usepackage[big]{layaureo} 				%better formatting of the A4 page
-\usepackage[left=2cm,right=2cm,top=1cm,bottom=1cm,bindingoffset=0cm]{geometry}
+\usepackage[left=2cm,right=2cm,top=1cm,bottom=0cm,bindingoffset=0cm]{geometry}
 % an alternative to Layaureo can be ** \usepackage{fullpage} **
 \usepackage{supertabular} 				%for Grades
 \usepackage{titlesec}					%custom \section
@@ -87,15 +87,24 @@ ItalicFont = Fontin-Italic.otf
 %Section: Work Experience at the top
 \section{Work Experience}
 \begin{tabular}{p{3cm}|p{11cm}}
-\makecell[r]{\textsc{October 2018} \\ \textsc{- Present}} & \textbf{JetBrains, Software Engineer (Java)}\\&
+
+\makecell[r]{\textsc{February 2019} \\ \textsc{- Present}} & \makecell[l]{\textbf{Moscow Institute of Physics and Technology, Teaching Assistant } \\ \textbf{on "Theory and Practice of Concurrent Computing" course (C++)}}\\&
 \footnotesize{
      \makecell[l]{
-     Continued working on refactoring system for RubyMine, \\currently improving Ruby on Rails integration.}}
+     Responsibilities of assistant: check students' homework, make code reviews, \\ explain some material, improve tests and internal library code.}}
 \\
+
+\makecell[r]{\textsc{October 2018} \\ \textsc{- February 2019}} & \textbf{JetBrains, Software Engineer (Java)}\\&
+\footnotesize{
+     \makecell[l]{
+     Continued developing refactoring system for RubyMine, \\worked on Ruby on Rails integration.}}
+\\
+
 \makecell[r]{\textsc{July 2018}\\  \textsc{- August 2018}} & \textbf{JetBrains, Software Engineering Intern (Java)}\\&
 \footnotesize{
 \makecell[l]{Developed new intentions for RubyMine IDE; introduced better parameter \\refactoring: added parameter type choosing option, improved invocation points \\search, reworked preview structure with respect to class hierarchy.}
 }
+
 \end{tabular}
 
 %Section: Education
@@ -110,8 +119,8 @@ ItalicFont = Fontin-Italic.otf
 %Section: Projects
 \section{Projects}
 \begin{tabular}{rl}	
- \href{https://github.com/AndroidTopTeam/MyChief}{MyChief} & Developed Android application with a team of 3 students: we created\\ & a tool, that helps people to find what meal they can do with products\\ & they have. I implemented structure of app, two others worked with\\ & API and design.\\
- \href{https://github.com/mary3000/telegram-restaurant-bot}{RestaurantBot} & Created simple restaurant bot on python, in which you can look at\\ & the menu and choose meals for order, book a table, etc. I used\\ & database on sqlite for collecting and showing data for user.
+ \href{https://github.com/AndroidTopTeam/MyChief}{MyChief} & Android application, made with a team of 3 students. Can search for \\& recipes by products you entered. I implemented the structure of app.\\
+ \href{https://github.com/mary3000/telegram-restaurant-bot}{RestaurantBot} & Telegram bot on Python, imitating restaurant service for meal ordering.
  
 \end{tabular}
 
@@ -119,16 +128,16 @@ ItalicFont = Fontin-Italic.otf
 \begin{tabular}{p{3cm}|p{11cm}}
 \textsc{November 2018} & \textbf{Photo Lab Live Challenge: Go Viral or Go Home (1st place)}\\&
 \footnotesize{
-\makecell[l]{Task was to suggest and develop new image filters using company API.\\ We designed filter that changes dress style using clothes segmentation.}
+\makecell[l]{Image filter that changes dress style using clothes segmentation.\\  Backend, web.py, heroku.}
 }
 \end{tabular}
 
 \section{Knowledge and Skills}
 \begin{tabular}{rl}
-Advanced:& Java, C++\\
-Basic:& Python, Ruby, Android, SQL, HTML, CSS, Git\\
-Knowledge:& Algorithms, Data structures, Concurrent computing, Distributed systems\\
-Languages:& Russian (native), English (intermidiate)
+Programming languages:& Java, C++, Go, Python, F\# \\
+Technologies:& SQL, Git, Android, Docker, RabbitMQ\\
+Knowledge:& Algorithms, Data structures, Concurrent computing, \\&Distributed systems, Databases\\
+Languages:& Russian (native), English (intermediate)
 \end{tabular}
 
 %\newpage
