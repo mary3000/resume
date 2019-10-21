@@ -1,0 +1,233 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj + some brand new features from Mary Feofanova
+% Website: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\usepackage[margin=0.3in]{geometry}
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.0in}
+\addtolength{\evensidemargin}{-0.0in}
+\addtolength{\textwidth}{0in}
+\addtolength{\topmargin}{10pt}
+\addtolength{\textheight}{0.0in}
+
+\urlstyle{same}
+
+\usepackage{xcolor}% http://ctan.org/pkg/xcolor
+\usepackage{hyperref}% http://ctan.org/pkg/hyperref
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!50!red,
+  linkbordercolor=red,
+  urlcolor=blue!70!black
+}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\def \ifempty#1{\def\temp{#1} \ifx\temp\empty }
+
+\newcommand{\resumeItem}[2]{
+  \item\small{
+  	\ifempty{#1}#2\else\textbf{#1}{: #2 \vspace{-2pt}}\fi
+  }
+}
+
+\usepackage[dvipsnames]{xcolor}
+\definecolor{mygray}{gray}{0}
+\usepackage{fancybox}
+
+\usepackage{lmodern}
+\usepackage{tikz}
+
+% Style definition
+\tikzset{rndblock/.style={rounded corners,rectangle,draw,outer sep=0pt}}
+
+% Command Definition
+% 1 optional to customize the aspect, 2 mandatory: text to be framed
+\newcommand{\tframed}[2][]{\tikz[baseline=(h.base)]\node[rndblock,#1] (h) {\color{black}{#2}};}
+
+\newcommand*{\mystrut}{\rule[-0.2\baselineskip]{0pt}{0.8\baselineskip}}
+\newcommand{\skill}[1]{\tframed[lightgray]{\mystrut#1}}
+
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textcolor{mygray}{#2} \\
+      \textit{\small#3} & \textcolor{mygray}{\textit{\small #4}} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeExpSubheading}[5]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1}  & \textcolor{mygray}{#2} \\
+      \textit{\small#3} & \textcolor{mygray}{\textit{\small #4}} \\
+      {\scriptsize#5}
+    \end{tabular*}\vspace{2pt}
+}
+
+\newcommand{\resumeProjSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1}  & \textcolor{mygray}{#2} \\
+      \scriptsize {#3} & \textcolor{mygray}{\textit{\small #4}} \\
+    \end{tabular*}\vspace{2pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\usepackage{changepage}
+\newcommand{\resumeDesc}[1]{\begin{adjustwidth}{5pt}{0pt}\vspace{-2pt}{\small{#1}}\end{adjustwidth}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Mariia (Mary) Feofanova} & Email : \href{mailto:mary.fifa3000@gmail.com}{mary.fifa3000@gmail.com}\\
+  Github: \href{https://github.com/mary3000}{mary3000} & Mobile : +79168354966 \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+       {Moscow Institute of Physics and Technology [planned]}{Moscow, Russia}
+      {Master's degree in Computer Science}{Sept. 2020 - Aug. 2022}
+  \resumeSubheading
+       {The Yandex School of Data Analysis}{Moscow, Russia}{Big Data Infrastructure}{Sept. 2019 - Aug. 2021 (Present)}
+    \resumeSubheading
+      {Moscow Institute of Physics and Technology}{Moscow, Russia}
+      {Bachelor of Applied Mathematics 
+       and Computer Science}{Sept. 2016 - Aug. 2020 (Present)}
+	 \begin{comment}
+	 \resumeItemListStart
+        \resumeItem{Relevant Modules}
+          {Modules...}
+      \resumeItemListEnd
+      \end{comment}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+      \resumeExpSubheading
+      {Google LLC}{London, UK}
+      {Software Engineering Intern, Android App Compat team}{July 2019 - Sept. 2019}
+      {\skill{GoLang} \skill{Java} \skill{Android} \skill{C++} \skill{Protobuf} \skill{SQL}}
+      \resumeDesc{
+      \begin{itemize}
+          \item Analyzed statistics about Android API usage and wrote design document about how to utilize it.
+          \item Integrated it into Android source code presubmit checker to prevent breakage of popular apps.
+      \end{itemize}}
+      \resumeExpSubheading
+      {Moscow Institute of Physics and Technology}{Moscow, Russia}
+      {Teaching Assistant, "Theory and Practice of Concurrent Computing" course}{Feb. 2019 - May 2019}
+      {\skill{C++} \skill{x86 Assembly}}
+      \resumeDesc{
+      \begin{itemize}
+          \item Reviewed students' code.
+          \item Held weekly theory homework defences.
+          \item Added more tests for checking students' solutions.
+      \end{itemize}
+      }
+      \resumeExpSubheading
+      {JetBrains s.r.o.}{Moscow, Russia}
+      {Software Engineer, RubyMine team}{Oct. 2018 - Feb. 2019}
+      {\skill{Java} \skill{Ruby} \skill{Ruby on Rails}}
+      \resumeDesc{\begin{itemize}
+          \item Added new extract options (substring, heredoc) to refactoring, made name suggestions less error-prone. 
+          \item Improved Rails-specific refactoring: model fields, associations support.
+      \end{itemize}}
+        \resumeExpSubheading
+      {JetBrains s.r.o.}{Moscow, Russia}
+      {Software Engineering Intern, RubyMine team}{Jul. 2018 - Aug. 2018}
+      {\skill{Java} \skill{Ruby}}
+          \resumeDesc{\begin{itemize}
+              \item Developed new intentions and inspections for RubyMine IDE. 
+              \item Improved parameter refactoring system: added new parameter type choosing option, made smarter invocation points search, restructured preview UI with respect to class hierarchy.
+          \end{itemize}}
+    
+  \resumeSubHeadingListEnd
+
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeProjSubheading
+      {\href{https://github.com/QratorLabs/inclickdb}{InclickDB}}{Moscow, Russia}
+      {\skill{GoLang} \skill{Python} \skill{Grafana} \skill{Graphite} \skill{ClickHouse} \skill{InfluxDB}}{May 2019}
+          \resumeDesc{Investigated possible solutions to a problem of migrating from InclickDB to ClickHouse for a monitoring system with tagged metrics. Contributed to open-source code by teaching myself GoLang to create tag support in existing solution: \href{https://github.com/lomik/carbon-clickhouse/pull/32}{pull-request}.}
+    \resumeProjSubheading
+      {\href{https://github.com/AndroidTopTeam/MyChief}{MyChief}}{Moscow, Russia}
+      {\skill{Java} \skill{Android}}{Nov. 2017}
+      \resumeDesc{Learned Android and implemented all structure and internal code logic (activities, fragments, lru cache) of mobile app that can search for recipes with ingredients entered by user, collaborated with a team of 3 students.}
+  \resumeSubHeadingListEnd
+
+\section{Achievements}
+  \resumeSubHeadingListStart
+    \resumeProjSubheading
+      {[Hackathon] \href{https://github.com/PhotoLabBestTeam/heroku}{Photo Lab Live Challenge: Go Viral or Go Home} - I place}{Moscow, Russia}
+      {\skill{Python} \skill{web.py} \skill{Heroku}}
+      {Nov. 2018}
+          \resumeDesc{Developed backend for photo filter that changes clothes style, having only 48 hours was able to quickly learn python framework and to deploy MVP.}
+  \resumeSubHeadingListEnd
+%
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+ \resumeSubHeadingListStart
+   \item{
+     \textbf{Languages}{: C++, Java, GoLang, Python, F\#. }
+   }\vspace{-7pt}
+   \item{
+     \textbf{Technologies}{: SQL, Git, \LaTeX, Android, Docker, TLA+, PlusCal, Python frameworks (numpy, pandas, sklearn).}
+   }
+   \vspace{-7pt}
+   \item{
+     \textbf{Knowledge}{: Algorithms, Data Structures, Concurrent Computing, Distributed Systems.}
+   }
+ \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
