@@ -9,4 +9,4 @@
 
 My tex code is slightly different from the original template (e.g., it has tags).  
 
-Any comments and suggestions are welcome - just follow [drive-comment](https://drive.google.com/file/d/100slQcS6Yo-f_NM34ABNovvttmNmmzte/view?usp=sharing), select any text, and leave comment on it!
+Any comments and suggestions are welcome! 
