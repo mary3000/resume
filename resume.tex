@@ -7,6 +7,9 @@
 
 \documentclass[letterpaper,10pt]{article}
 
+\usepackage{makecell}
+\usepackage[link=off]{phonenumbers}
+
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -28,7 +31,7 @@
 \addtolength{\oddsidemargin}{-0.0in}
 \addtolength{\evensidemargin}{-0.0in}
 \addtolength{\textwidth}{0in}
-\addtolength{\topmargin}{10pt}
+\addtolength{\topmargin}{50pt}
 \addtolength{\textheight}{0.0in}
 
 \urlstyle{same}
@@ -93,7 +96,7 @@
       \textbf{#1}  & \textcolor{mygray}{#2} \\
       \textit{\small#3} & \textcolor{mygray}{\textit{\small #4}} \\
       {\scriptsize#5}
-    \end{tabular*}\vspace{2pt}
+    \end{tabular*}\vspace{4pt}
 }
 
 \newcommand{\resumeProjSubheading}[4]{
@@ -101,7 +104,7 @@
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{#1}  & \textcolor{mygray}{#2} \\
       \scriptsize {#3} & \textcolor{mygray}{\textit{\small #4}} \\
-    \end{tabular*}\vspace{2pt}
+    \end{tabular*}\vspace{4pt}
 }
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
@@ -125,7 +128,7 @@
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
   \textbf{\Large Mariia (Mary) Feofanova} & Email : \href{mailto:mary.fifa3000@gmail.com}{mary.fifa3000@gmail.com}\\
-  Github: \href{https://github.com/mary3000}{mary3000} & Mobile : +79168354966 \\
+  Github: \href{https://github.com/mary3000}{mary3000} & Mobile : +7\hspace{0.5ex}916\hspace{0.5ex}835\hspace{0.5ex}49\hspace{0.5ex}66 \\
 \end{tabular*}
 
 
@@ -141,12 +144,12 @@
       {Moscow Institute of Physics and Technology}{Moscow, Russia}
       {Bachelor of Applied Mathematics 
        and Computer Science}{Sept. 2016 - Aug. 2020 (Present)}
-	 \begin{comment}
+	 %\begin{comment}
 	 \resumeItemListStart
-        \resumeItem{Relevant Modules}
-          {Modules...}
+        \resumeItem{Thesis}
+          {Verification of synchronization primitives and concurrent data structures}
       \resumeItemListEnd
-      \end{comment}
+      %\end{comment}
   \resumeSubHeadingListEnd
 
 
@@ -155,59 +158,60 @@
   \resumeSubHeadingListStart
       \resumeExpSubheading
       {Google LLC}{London, UK}
-      {Software Engineering Intern, Android App Compat team}{July 2019 - Sept. 2019}
+      {SWE Intern, Android App Compat team}{July 2019 - Sept. 2019}
       {\skill{GoLang} \skill{Java} \skill{Android} \skill{C++} \skill{Protobuf} \skill{SQL}}
       \resumeDesc{
       \begin{itemize}
-          \item Analyzed statistics about Android API usage and wrote design document about how to utilize it.
-          \item Integrated it into Android source code presubmit checker to prevent breakage of popular apps.
+          \item Analyzed statistics about Android API usage and wrote design document about its utilization.
+          \item Integrated statistics into Android source code presubmit checker: now it warns if pull-request changes will break popular apps.
       \end{itemize}}
       \resumeExpSubheading
       {Moscow Institute of Physics and Technology}{Moscow, Russia}
-      {Teaching Assistant, "Theory and Practice of Concurrent Computing" course}{Feb. 2019 - May 2019}
+      {Teaching Assistant, "Theory and Practice of Concurrent Computing" course}{Feb. 2019 - Present}
       {\skill{C++} \skill{x86 Assembly}}
       \resumeDesc{
       \begin{itemize}
-          \item Reviewed students' code.
-          \item Held weekly theory homework defences.
-          \item Added more tests for checking students' solutions.
+          \item Holding seminars, reviewing homework, improving test infrastructure.
       \end{itemize}
       }
       \resumeExpSubheading
       {JetBrains s.r.o.}{Moscow, Russia}
-      {Software Engineer, RubyMine team}{Oct. 2018 - Feb. 2019}
+      {\makecell[l]{SWE Intern, RubyMine team \\ SWE, RubyMine team}}{\makecell[r]{Jul. 2018 - Aug. 2018 \\ Oct. 2018 - Feb. 2019}}
       {\skill{Java} \skill{Ruby} \skill{Ruby on Rails}}
       \resumeDesc{\begin{itemize}
-          \item Added new extract options (substring, heredoc) to refactoring, made name suggestions less error-prone. 
-          \item Improved Rails-specific refactoring: model fields, associations support.
+          \item Developed new intentions, inspections and refactoring options (e.g. \href{https://www.jetbrains.com/help/ruby/introduce-parameter.html}{introduce parameter}) for RubyMine IDE. 
+          \item Improved Rails-specific refactoring system: model fields, associations support.
       \end{itemize}}
-        \resumeExpSubheading
-      {JetBrains s.r.o.}{Moscow, Russia}
-      {Software Engineering Intern, RubyMine team}{Jul. 2018 - Aug. 2018}
-      {\skill{Java} \skill{Ruby}}
-          \resumeDesc{\begin{itemize}
-              \item Developed new intentions and inspections for RubyMine IDE. 
-              \item Improved parameter refactoring system: added new parameter type choosing option, made smarter invocation points search, restructured preview UI with respect to class hierarchy.
-          \end{itemize}}
+       
     
   \resumeSubHeadingListEnd
 
 \section{Projects}
   \resumeSubHeadingListStart
+  
+      \resumeProjSubheading
+      {\href{https://gitlab.com/mary3000/twist/-/tree/model-checker-merge/twist/checker}{Model checker for concurrent programs} [Bachelor thesis]}{Moscow, Russia}
+      {\skill{C++}}{Nov. 2019 - May 2020}
+          \resumeDesc{Wrote model checker that tests concurrent C++ programs. Key feature: code doesn't need to be translated to formal language (like e.g. TLA+ / +Cal). Verified my work on non-trivial examples: ABA bug inside lock-free cache for Yandex allocator (finds bug 16 times faster than +Cal) and bug inside implementation of Executors framework.}
+  
     \resumeProjSubheading
       {\href{https://github.com/QratorLabs/inclickdb}{InclickDB}}{Moscow, Russia}
       {\skill{GoLang} \skill{Python} \skill{Grafana} \skill{Graphite} \skill{ClickHouse} \skill{InfluxDB}}{May 2019}
-          \resumeDesc{Investigated possible solutions to a problem of migrating from InclickDB to ClickHouse for a monitoring system with tagged metrics. Contributed to open-source code by teaching myself GoLang to create tag support in existing solution: \href{https://github.com/lomik/carbon-clickhouse/pull/32}{pull-request}.}
+          \resumeDesc{Investigated possible solutions to a problem of migrating from InclickDB to ClickHouse for a monitoring system with tagged metrics. Created tag support in existing solution by teaching myself Golang and contributing to open-source: \href{https://github.com/lomik/carbon-clickhouse/pull/32}{pull-request}.}
+          
+    \begin{comment}  
     \resumeProjSubheading
       {\href{https://github.com/AndroidTopTeam/MyChief}{MyChief}}{Moscow, Russia}
       {\skill{Java} \skill{Android}}{Nov. 2017}
       \resumeDesc{Learned Android and implemented all structure and internal code logic (activities, fragments, lru cache) of mobile app that can search for recipes with ingredients entered by user, collaborated with a team of 3 students.}
+    \end{comment}
+      
   \resumeSubHeadingListEnd
 
 \section{Achievements}
   \resumeSubHeadingListStart
     \resumeProjSubheading
-      {[Hackathon] \href{https://github.com/PhotoLabBestTeam/heroku}{Photo Lab Live Challenge: Go Viral or Go Home} - I place}{Moscow, Russia}
+      {\href{https://github.com/PhotoLabBestTeam/heroku}{Photo Lab Live Challenge: Go Viral or Go Home} - I place [Hackathon]}{Moscow, Russia}
       {\skill{Python} \skill{web.py} \skill{Heroku}}
       {Nov. 2018}
           \resumeDesc{Developed backend for photo filter that changes clothes style, having only 48 hours was able to quickly learn python framework and to deploy MVP.}
@@ -217,10 +221,10 @@
 \section{Programming Skills}
  \resumeSubHeadingListStart
    \item{
-     \textbf{Languages}{: C++, Java, GoLang, Python, F\#. }
+     \textbf{Languages}{: C++, GoLang, Java, Python, TLA+, +Cal. }
    }\vspace{-7pt}
    \item{
-     \textbf{Technologies}{: SQL, Git, \LaTeX, Android, Docker, TLA+, PlusCal, Python frameworks (numpy, pandas, sklearn).}
+     \textbf{Technologies}{: SQL, Git, \LaTeX, Docker. }
    }
    \vspace{-7pt}
    \item{
